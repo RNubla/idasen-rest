@@ -280,11 +280,11 @@ class IdasenDesk:
         >>> asyncio.run(example())
         """
         # https://github.com/rhyst/linak-controller/issues/32#issuecomment-1784055470
-        await self._client.write_gatt_char(_UUID_DPG, b"\x7F\x86\x00")
+        await self._client.write_gatt_char(_UUID_DPG, b"\x7f\x86\x00")
         await self._client.write_gatt_char(
             _UUID_DPG,
-            b"\x7F\x86\x80\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0A\x0B\x0C\x0D"
-            b"\x0E\x0F\x10\x11",
+            b"\x7f\x86\x80\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d"
+            b"\x0e\x0f\x10\x11",
         )
         await self._client.write_gatt_char(_UUID_COMMAND, _COMMAND_WAKEUP)
 
